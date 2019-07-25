@@ -116,7 +116,7 @@
     "property-no-unknown": true,
     "property-no-vendor-prefix": true,
     "property-whitelist": null,
-    "rule-empty-line-before": "never",
+    "rule-empty-line-before": "always-multi-line",
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-blacklist": [],
     "selector-attribute-operator-space-after": "never",

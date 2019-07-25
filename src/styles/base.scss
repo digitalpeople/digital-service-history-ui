@@ -1,19 +1,24 @@
 @import "./variables.scss";
+
 .app {
   background: $background-color;
   min-height: 100vh;
   color: white;
+
   .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
+
   .nav-item {
     display: inline-block;
     padding: 10px;
+
     &:hover {
       background-color: darkslategrey;
     }
+
     a {
       color: $link-color;
       text-decoration: none;
