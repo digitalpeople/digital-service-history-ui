@@ -1,24 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+import Navigation from './components/navigation/navigation';
 import Login from './components/login/login';
 import About from './components/about';
 import Home from './home';
 import './styles/base.scss';
 
+const navigation = {
+  items: [
+    {
+      id: 0,
+      path: '/about',
+      text: 'About',
+    },
+    {
+      id: 1,
+      path: '/login',
+      text: 'Login',
+    },
+  ],
+};
+
 const App = () => (
   <div className="app">
     <Router>
-      <ul className="nav">
-        <li className="nav-item">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/login">Login</Link>
-        </li>
-      </ul>
+      <Navigation navigation={navigation} />
 
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
