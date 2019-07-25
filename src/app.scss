@@ -1,24 +1,21 @@
+@import "./variables.scss";
 .app {
-  background: #282c34;
+  background: $background-color;
   min-height: 100vh;
-  color: #ffffff;
-
+  color: white;
   .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-
   .nav-item {
     display: inline-block;
     padding: 10px;
-
     &:hover {
       background-color: darkslategrey;
     }
-
     a {
-      color: #61dafb;
+      color: $link-color;
       text-decoration: none;
     }
   }
