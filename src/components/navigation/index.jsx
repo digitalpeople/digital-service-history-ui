@@ -27,7 +27,7 @@ const Navigation = (props) => {
 Navigation.propTypes = {
   navigation: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       path: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
     })).isRequired,
