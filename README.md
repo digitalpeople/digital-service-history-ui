@@ -2,6 +2,8 @@
 
 Front-end SPA of digital service history.
 
+[![Build Status](https://travis-ci.org/digitalpeople/digital-service-history-ui.svg?branch=master)](https://travis-ci.org/digitalpeople/digital-service-history-ui)
+
 ## Available Scripts
 
 In the project directory, you can run:

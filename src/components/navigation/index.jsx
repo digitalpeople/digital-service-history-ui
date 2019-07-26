@@ -9,9 +9,11 @@ const Navigation = (props) => {
       <ul className="nav">
         {
           navigation.items.map(item => (
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              key={item.id}
+            >
               <NavLink
-                key={item.id}
                 to={item.path}
               >
                 {item.text}
@@ -25,11 +27,13 @@ const Navigation = (props) => {
 };
 
 Navigation.propTypes = {
-  navigation: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  })).isRequired,
+  navigation: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      path: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    })).isRequired,
+  }).isRequired,
 };
 
 export default Navigation;

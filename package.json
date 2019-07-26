@@ -75,9 +75,11 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint --fix ./src",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint ./src",
+    "lint:js:fix": "eslint --fix ./src",
     "lint:css": "stylelint ./src/**/*.scss",
+    "lint:css:fix": "stylelint ./src/**/*.scss --fix",
     "test:watch": "node scripts/test.js",
     "test": "jest --coverage",
     "test:clean": "jest --clearCache"
