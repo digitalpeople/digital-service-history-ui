@@ -25,11 +25,13 @@ const Navigation = (props) => {
 };
 
 Navigation.propTypes = {
-  navigation: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  })).isRequired,
+  navigation: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    })).isRequired,
+  }).isRequired,
 };
 
 export default Navigation;
