@@ -28,10 +28,11 @@ const App = () => (
   <div className="app">
     <Router>
       <Navigation navigation={navigation} />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/login" component={Login} />
+      <main className="container">
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/login" component={Login} />
+      </main>
     </Router>
   </div>
 );

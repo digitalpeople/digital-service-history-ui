@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => (
   <section className="login">
-    <h2>Login</h2>
+    <header>Login</header>
     <article className="container">
       <label htmlFor="username">
         Username

@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+nav {
+  margin: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  .nav-item {
+    padding: 12px;
+  }
+}
