@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './navigation.scss';
+import { setNavigationItemAction } from './navigation.actions';
 
 const Navigation = (props) => {
   const { navigation } = props;
@@ -16,6 +18,7 @@ const Navigation = (props) => {
             >
               <NavLink
                 to={item.path}
+                onClick={() => props.setSelected(item)}
               >
                 {item.text}
               </NavLink>
@@ -35,6 +38,15 @@ Navigation.propTypes = {
       text: PropTypes.string.isRequired,
     })).isRequired,
   }).isRequired,
+  setSelected: PropTypes.func.isRequired,
 };
 
-export default Navigation;
+const mapStateToProps = state => ({
+  navigation: state.navigation,
+});
+
+const mapDispatchToProps = dispatch => ({
+  setSelected: selected => dispatch(setNavigationItemAction(selected)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

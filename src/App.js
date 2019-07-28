@@ -9,25 +9,10 @@ import About from './components/about';
 import Home from './home';
 import './styles/base.scss';
 
-const navigation = {
-  items: [
-    {
-      id: 0,
-      path: '/about',
-      text: 'About',
-    },
-    {
-      id: 1,
-      path: '/login',
-      text: 'Login',
-    },
-  ],
-};
-
 const App = () => (
   <div className="app">
     <Router>
-      <Navigation navigation={navigation} />
+      <Navigation />
       <main className="container">
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
