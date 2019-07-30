@@ -8,22 +8,32 @@ const Login = () => (
       <div className="form-group">
         <input
           type="text"
-          placeholder="Username"
           name="username"
           className="form-control"
           required
         />
-        <span className="form-highlight" />
-        <span className="form-bar" />
-        <span htmlFor="username" className="float-label">login</span>
+        <span
+          htmlFor="username"
+          className="label"
+        >
+          Username
+        </span>
       </div>
-      <input
-        type="password"
-        placeholder="Password"
-        name="password"
-        required
-      />
 
+      <div className="form-group">
+        <input
+          type="password"
+          name="password"
+          className="form-control"
+          required
+        />
+        <span
+          htmlFor="password"
+          className="label"
+        >
+          Password
+        </span>
+      </div>
       <button type="submit">Login</button>
 
     </article>
