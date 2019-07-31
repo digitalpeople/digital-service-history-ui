@@ -2,26 +2,11 @@
 
 .app {
   background: $background-color;
-  min-height: 100vh;
+  min-height: calc(100vh - 42px);
   color: white;
 
-  .nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-item {
-    display: inline-block;
-    padding: 10px;
-
-    &:hover {
-      background-color: darkslategrey;
-    }
-
-    a {
-      color: $link-color;
-      text-decoration: none;
-    }
+  main {
+    padding: 0 12px;
+    margin-top: 42px;
   }
 }
