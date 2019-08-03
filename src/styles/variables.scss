@@ -1,3 +1,14 @@
 /* stylelint-disable color-no-hex  */
+$color-primary: #61dafb;
+$color-secondary: #8ce4fc;
+$color-tertiary: #d9dcd6;
+$color-dark: #16425b;
+$color-light: #81c3d7;
+
 $background-color: #282c34;
 $link-color: #61dafb;
+
+$btn-primary-bg-color: $color-primary;
+$btn-primary-border-color: $color-primary;
+$btn-primary-active-bg-color: $color-secondary;
+$btn-primary-active-border-color: $color-secondary;

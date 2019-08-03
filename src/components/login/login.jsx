@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import TextInput from '../forms/text-input';
+import { loginAction } from './login.action';
 import './login.scss';
 
-const Login = () => {
+const Login = (props) => {
+  const {
+    onLogin,
+  } = props;
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  console.log(username, password);
 
   return (
     <section className="login">
@@ -24,11 +29,32 @@ const Login = () => {
           isPassword
         />
 
-        <button type="submit">Login</button>
+        <button
+          type="submit"
+          className="btn btn-primary btn-block"
+          onClick={() => onLogin({
+            username,
+            password,
+          })}
+        >
+          Login
+        </button>
 
       </article>
     </section>
   );
 };
 
-export default Login;
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  login: state.login,
+});
+
+const mapDispatchToProps = dispatch => ({
+  onLogin: ({ username, password }) => dispatch(loginAction({ username, password })),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
