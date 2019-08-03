@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextInput from '../forms/text-input';
 import './login.scss';
 
-const Login = () => (
-  <section className="login">
-    <header>Login</header>
-    <article className="container">
-      <TextInput
-        name="username"
-        label="Username"
-      />
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  console.log(username, password);
 
-      <TextInput
-        name="password"
-        label="Password"
-        isPassword
-      />
+  return (
+    <section className="login">
+      <header>Login</header>
+      <article className="container">
+        <TextInput
+          name="username"
+          label="Username"
+          onChange={value => setUsername(value)}
+        />
 
-      <button type="submit">Login</button>
+        <TextInput
+          name="password"
+          label="Password"
+          onChange={value => setPassword(value)}
+          isPassword
+        />
 
-    </article>
-  </section>
-);
+        <button type="submit">Login</button>
+
+      </article>
+    </section>
+  );
+};
 
 export default Login;

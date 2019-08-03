@@ -1,6 +1,9 @@
 @import "../../styles/variables.scss";
 
 .login {
+  article {
+    width: 25%;
+  }
 
   button {
     padding: 10px 14px;
