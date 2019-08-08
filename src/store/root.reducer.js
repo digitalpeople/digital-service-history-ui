@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
+import authReducer from './auth/auth.reducer';
 import navigationReducer from '../components/navigation/navigation.reducer';
-import loginReducer from '../components/login/login.reducer';
 
 export default combineReducers({
+  auth: authReducer,
   navigation: navigationReducer,
-  login: loginReducer,
 });

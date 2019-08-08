@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import './index.css';
 import App from './App';
-import store from './store';
+import store from './store/store';
 import * as serviceWorker from './serviceWorker';
 
 axios.defaults.baseURL = 'http://localhost:9000';
+axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('userToken')}`;
 
 ReactDOM.render(
   <Provider store={store}>

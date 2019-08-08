@@ -7,6 +7,7 @@ import { setNavigationItemAction } from './navigation.actions';
 
 const Navigation = (props) => {
   const { navigation } = props;
+
   return (
     <nav>
       <ul className="nav">

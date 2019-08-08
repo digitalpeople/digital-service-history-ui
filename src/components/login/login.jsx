@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import TextInput from '../forms/text-input';
-import { loginAction } from './login.action';
+import { loginAction } from '../../store/auth/auth.action';
 import './login.scss';
 
 const Login = (props) => {
@@ -50,7 +50,7 @@ Login.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  login: state.login,
+  login: state.auth,
 });
 
 const mapDispatchToProps = dispatch => ({
