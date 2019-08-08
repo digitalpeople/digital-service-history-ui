@@ -3,8 +3,9 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import Navigation from './components/navigation';
-import Login from './components/login/login';
+import Navigation from './components/navigation/navigation';
+import Login from './components/auth/login';
+import Logout from './components/auth/logout';
 import About from './components/about';
 import Home from './home';
 import './styles/base.scss';
@@ -17,6 +18,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
+        <Route path="/logout" component={Logout} />
       </main>
     </Router>
   </div>

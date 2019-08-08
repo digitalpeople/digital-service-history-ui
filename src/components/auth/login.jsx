@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import TextInput from '../forms/text-input';
 import { loginAction } from '../../store/auth/auth.action';
 import './login.scss';
@@ -8,9 +9,14 @@ import './login.scss';
 const Login = (props) => {
   const {
     onLogin,
+    auth,
   } = props;
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  if (auth.isAuthenticated) {
+    return <Redirect to="/about" />;
+  }
 
   return (
     <section className="login">
@@ -46,11 +52,14 @@ const Login = (props) => {
 };
 
 Login.propTypes = {
+  auth: PropTypes.shape({
+    isAuthenticated: PropTypes.bool.isRequired,
+  }).isRequired,
   onLogin: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-  login: state.auth,
+  auth: state.auth,
 });
 
 const mapDispatchToProps = dispatch => ({

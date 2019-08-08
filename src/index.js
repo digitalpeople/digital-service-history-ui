@@ -8,7 +8,8 @@ import store from './store/store';
 import * as serviceWorker from './serviceWorker';
 
 axios.defaults.baseURL = 'http://localhost:9000';
-axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('userToken')}`;
+const token = localStorage.getItem('userToken');
+axios.defaults.headers.common.Authorization = token ? `Bearer ${token}` : null;
 
 ReactDOM.render(
   <Provider store={store}>
