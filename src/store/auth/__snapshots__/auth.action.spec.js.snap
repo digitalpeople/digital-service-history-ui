@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auth.action loginFailure should return action 1`] = `
+Object {
+  "error": Object {
+    "message": "test-error-message",
+  },
+  "type": "@auth/LOGIN_FAILURE",
+}
+`;
+
+exports[`auth.action loginRequest should return action 1`] = `
+Object {
+  "type": "@auth/LOGIN_REQUEST",
+}
+`;
+
+exports[`auth.action loginSuccess should return action 1`] = `
+Object {
+  "type": "@auth/LOGIN_SUCCESS",
+  "userId": "test-user-id",
+}
+`;
+
+exports[`auth.action logout should return action 1`] = `
+Object {
+  "type": "@auth/LOGOUT",
+}
+`;
