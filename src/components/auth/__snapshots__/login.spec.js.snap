@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render component 1`] = `
+<section
+  className="login"
+>
+  <header>
+    Login
+  </header>
+  <article
+    className="container"
+  >
+    <TextInput
+      isPassword={false}
+      label="Username"
+      name="username"
+      onChange={[Function]}
+    />
+    <TextInput
+      isPassword={true}
+      label="Password"
+      name="password"
+      onChange={[Function]}
+    />
+    <button
+      className="btn btn-primary btn-block"
+      onClick={[Function]}
+      type="submit"
+    >
+      Login
+    </button>
+  </article>
+</section>
+`;

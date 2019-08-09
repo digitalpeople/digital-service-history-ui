@@ -6,7 +6,7 @@ import TextInput from '../forms/text-input';
 import { loginAction } from '../../store/auth/auth.action';
 import './login.scss';
 
-const Login = (props) => {
+export const Login = (props) => {
   const {
     onLogin,
     auth,
