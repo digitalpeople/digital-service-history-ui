@@ -7,7 +7,7 @@ import Navigation from './components/navigation/navigation';
 import LoginComponent from './components/auth/login';
 import LogoutComponent from './components/auth/logout';
 import About from './components/about';
-import Home from './home';
+import Home from './components/home/home';
 import './styles/base.scss';
 
 const App = () => (
