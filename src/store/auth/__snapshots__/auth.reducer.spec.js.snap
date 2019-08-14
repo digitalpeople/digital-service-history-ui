@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auth.reducer initial state @auth/LOGIN_FAILURE should return state 1`] = `
+Object {
+  "isAuthenticated": false,
+  "message": undefined,
+  "userId": null,
+}
+`;
+
+exports[`auth.reducer initial state @auth/LOGIN_REQUEST should return state 1`] = `
+Object {
+  "isAuthenticated": false,
+  "message": null,
+  "userId": null,
+}
+`;
+
+exports[`auth.reducer initial state @auth/LOGIN_SUCCESS should return state 1`] = `
+Object {
+  "isAuthenticated": true,
+  "message": null,
+  "userId": "test-user-id",
+}
+`;
+
+exports[`auth.reducer initial state @auth/LOGOUT should return state 1`] = `
+Object {
+  "isAuthenticated": false,
+  "message": null,
+  "userId": null,
+}
+`;
+
+exports[`auth.reducer initial state unmanaged action type should return state 1`] = `
+Object {
+  "isAuthenticated": false,
+  "message": null,
+  "userId": null,
+}
+`;
+
+exports[`auth.reducer modified state @auth/LOGIN_FAILURE should return state 1`] = `
+Object {
+  "foo": "bar",
+  "message": undefined,
+}
+`;
+
+exports[`auth.reducer modified state @auth/LOGIN_REQUEST should return state 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
+
+exports[`auth.reducer modified state @auth/LOGIN_SUCCESS should return state 1`] = `
+Object {
+  "foo": "bar",
+  "isAuthenticated": true,
+  "userId": "test-user-id",
+}
+`;
+
+exports[`auth.reducer modified state @auth/LOGOUT should return state 1`] = `
+Object {
+  "isAuthenticated": false,
+  "message": null,
+  "userId": null,
+}
+`;
+
+exports[`auth.reducer modified state unmanaged action type should return state 1`] = `
+Object {
+  "foo": "bar",
+}
+`;

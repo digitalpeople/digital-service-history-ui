@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import TextInput from '../forms/text-input';
-import { loginAction } from './login.action';
+import { loginAction } from '../../store/auth/auth.action';
 import './login.scss';
 
-const Login = (props) => {
+export const Login = (props) => {
   const {
     onLogin,
+    auth,
   } = props;
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  if (auth.isAuthenticated) {
+    return <Redirect to="/about" />;
+  }
 
   return (
     <section className="login">
@@ -17,18 +25,23 @@ const Login = (props) => {
         <TextInput
           name="username"
           label="Username"
+          onChange={value => setUsername(value)}
         />
 
         <TextInput
           name="password"
           label="Password"
+          onChange={value => setPassword(value)}
           isPassword
         />
 
         <button
           type="submit"
           className="btn btn-primary btn-block"
-          onClick={() => onLogin({ username: 'user', password: 'abc123' })}
+          onClick={() => onLogin({
+            username,
+            password,
+          })}
         >
           Login
         </button>
@@ -39,11 +52,14 @@ const Login = (props) => {
 };
 
 Login.propTypes = {
+  auth: PropTypes.shape({
+    isAuthenticated: PropTypes.bool.isRequired,
+  }).isRequired,
   onLogin: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-  login: state.login,
+  auth: state.auth,
 });
 
 const mapDispatchToProps = dispatch => ({
