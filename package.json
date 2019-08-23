@@ -82,6 +82,7 @@
     "lint:css:fix": "stylelint ./src/**/*.scss --fix",
     "test:watch": "node scripts/test.js",
     "test": "jest --coverage",
+    "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:clean": "jest --clearCache"
   },
   "eslintConfig": {
@@ -148,5 +149,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.6"
   }
 }

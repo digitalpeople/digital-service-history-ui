@@ -3,6 +3,7 @@
 Front-end SPA of digital service history.
 
 [![Build Status](https://travis-ci.org/digitalpeople/digital-service-history-ui.svg?branch=master)](https://travis-ci.org/digitalpeople/digital-service-history-ui)
+[![Coverage Status](https://coveralls.io/repos/github/digitalpeople/digital-service-history-ui/badge.svg?branch=master)](https://coveralls.io/github/digitalpeople/digital-service-history-ui?branch=master)
 
 ## Available Scripts
 
