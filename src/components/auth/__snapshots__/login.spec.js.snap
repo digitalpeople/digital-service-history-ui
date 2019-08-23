@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Login should redirect component 1`] = `
+<Redirect
+  to="/about"
+/>
+`;
+
 exports[`Login should render component 1`] = `
 <section
   className="login"
