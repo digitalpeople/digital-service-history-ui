@@ -22,4 +22,19 @@ describe('Login', () => {
     // ASSERT
     expect(toJSON(actual)).toMatchSnapshot();
   });
+  it('should redirect component', () => {
+    // ASSIGN
+    const props = {
+      onLogin: jest.fn(),
+      auth: {
+        isAuthenticated: true,
+      },
+    };
+
+    // ACT
+    const actual = shallow(<Login {...props} />);
+
+    // ASSERT
+    expect(toJSON(actual)).toMatchSnapshot();
+  });
 });
